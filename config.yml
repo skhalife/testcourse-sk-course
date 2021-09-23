@@ -1,0 +1,16 @@
+title: testcourse-sk
+description: 'This is a test course '
+template:
+  repo: testcourse-sk-template
+  name: testcourse-sk
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
